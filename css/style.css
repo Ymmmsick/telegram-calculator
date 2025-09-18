@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--tg-theme-bg-color, #ffffff);
+    color: var(--tg-theme-text-color, #000000);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.calculator {
+    background: var(--tg-theme-secondary-bg-color, #f8f9fa);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 320px;
+}
+
+.display {
+    background: var(--tg-theme-bg-color, #ffffff);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.previous-operand {
+    font-size: 14px;
+    color: var(--tg-theme-hint-color, #999999);
+    min-height: 20px;
+    margin-bottom: 5px;
+}
+
+.current-operand {
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--tg-theme-text-color, #000000);
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: var(--tg-theme-button-color, #007acc);
+    color: var(--tg-theme-button-text-color, #ffffff);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-number {
+    background: var(--tg-theme-secondary-bg-color, #f0f0f0);
+    color: var(--tg-theme-text-color, #000000);
+}
+
+.btn-operator {
+    background: var(--tg-theme-button-color, #007acc);
+    color: var(--tg-theme-button-text-color, #ffffff);
+}
+
+.btn-equals {
+    background: var(--tg-theme-button-color, #007acc);
+    color: var(--tg-theme-button-text-color, #ffffff);
+}
+
+.btn-clear {
+    background: #ff6b6b;
+    color: white;
+}
+
+.btn-delete {
+    background: #ffa726;
+    color: white;
+}
+
+.btn-decimal {
+    background: var(--tg-theme-secondary-bg-color, #f0f0f0);
+    color: var(--tg-theme-text-color, #000000);
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .calculator {
+        padding: 15px;
+        border-radius: 15px;
+    }
+    
+    .display {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .current-operand {
+        font-size: 28px;
+    }
+    
+    .btn {
+        height: 55px;
+        font-size: 18px;
+    }
+    
+    .buttons {
+        gap: 8px;
+    }
+}
+
+@media (max-height: 600px) {
+    .btn {
+        height: 50px;
+        font-size: 16px;
+    }
+    
+    .display {
+        min-height: 60px;
+        padding: 15px;
+    }
+    
+    .current-operand {
+        font-size: 24px;
+    }
+}

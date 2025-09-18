@@ -1,0 +1,39 @@
+{
+  "name": "telegram-calculator-miniapp",
+  "version": "1.0.0",
+  "description": "一个专为 Telegram 设计的计算器 Mini App",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "nodemon bot.js",
+    "serve": "npx serve .",
+    "build": "echo 'No build process needed for static files'",
+    "deploy": "echo 'Please configure your deployment method'"
+  },
+  "keywords": [
+    "telegram",
+    "mini-app",
+    "calculator",
+    "bot",
+    "web-app"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "telegraf": "^4.15.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/telegram-calculator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/telegram-calculator/issues"
+  },
+  "homepage": "https://github.com/yourusername/telegram-calculator#readme"
+}
